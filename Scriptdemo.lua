@@ -2,7 +2,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 
        local Window = MakeWindow({
          Hub = {
-         Title = "Syper hub",
+         Title = "Ami hub",
          Animation = "Youtube: TBoy Roblox"
          },
         Key = {
@@ -31,7 +31,8 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       
 ------ Tab
      local Tab1o = MakeTab({Name = "Gravity hub"})
-     local Tab2o = MakeTab({Name = "Volcanic v3"})
+
+     local Tab2o = MakeTab({Name = "Quantum hub"})
      
 ------- BUTTON
     
@@ -39,10 +40,15 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
      Name = "Gravity hub",
     Callback = function()
 	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
-}
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()}
   end
-    }
+	    }
+
+	AddButton(Tab2o, {
+     Name = "Quantum hub",
+    Callback = function()
+	  local Settings = {
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()}
+  end
+		}
+	
