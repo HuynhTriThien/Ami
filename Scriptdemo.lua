@@ -3,7 +3,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
        local Window = MakeWindow({
          Hub = {
          Title = "Ami hub",
-         Animation = "Youtube: TBoy Roblox"
+         Animation = "By Ami hub"
          },
         Key = {
         KeySystem = false,
@@ -30,8 +30,10 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       })
       
 ------ Tab
-     local Tab1o = MakeTab({Name = "Redz hub v2"})
-     local Tab2o = MakeTab({Name = "Gravity hub"})
+     local Tab1o = MakeTab({Name = "Script tong hop"})
+
+     local Tab2o = MakeTab({Name = "Script hop server"})
+
 ------- BUTTON
     
     AddButton(Tab1o, {
@@ -46,9 +48,30 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/r
   end
     })
 
-AddButton(Tab2o, {
+AddButton(Tab1o, {
      Name = "Gravity hub",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+      end
+    })
+
+AddButton(Tab1o, {
+     Name = "Banana hub",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nghia11n/Banana-Hub/main/bananahub.lua"))()
+      end
+    })
+
+AddButton(Tab1o, {
+     Name = "Blue x hub",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/EN.lua"))()
+      end
+    })
+
+AddButton(Tab2o, {
+     Name = "Zoyx hub ",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iamkhnah/noguchihyuga/refs/heads/main/ScriptHop.lua"))()
       end
     })
