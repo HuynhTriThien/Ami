@@ -1,54 +1,43 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
+-- Load UI Redz
+loadstring(game:HttpGet("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/main/UiREDzV2.lua"))()
+repeat task.wait() until MakeWindow
 
-       local Window = MakeWindow({
-         Hub = {
-         Title = "Ami hub",
-         Animation = "Youtube: TBoy Roblox"
-         },
-        Key = {
-        KeySystem = false,
-        Title = "Key System",
-        Description = "",
-        KeyLink = "",
-        Keys = {"1234"},
-        Notifi = {
-        Notifications = true,
-        CorrectKey = "Running the Script...",
-       Incorrectkey = "The key is incorrect",
-       CopyKeyLink = "Copied to Clipboard"
-      }
-    }
-  })
+-- Window
+local Window = MakeWindow({
+    Hub = {Title = "Ami Hub", Animation = "Youtube: TBoy Roblox"},
+    Key = {KeySystem = false}
+})
 
-       MinimizeButton({
-       Image = "http://www.roblox.com/asset/?id=83190276951914",
-       Size = {60, 60},
-       Color = Color3.fromRGB(10, 10, 10),
-       Corner = true,
-       Stroke = false,
-       StrokeColor = Color3.fromRGB(255, 0, 0)
-      })
-      
------- Tab
-     local Tab1o = MakeTab({Name = "Gravity hub"})
+-- Minimize Button
+MinimizeButton({
+    Image = "http://www.roblox.com/asset/?id=83190276951914",
+    Size = {60, 60},
+    Color = Color3.fromRGB(10, 10, 10),
+    Corner = true,
+    Stroke = false
+})
 
-     local Tab2o = MakeTab({Name = "Quantum hub"})
-     
-------- BUTTON
-    
-    AddButton(Tab1o, {
-     Name = "Gravity hub",
+-- Tabs
+local Tab1o = MakeTab({Name = "Gravity Hub"})
+local Tab2o = MakeTab({Name = "Quantum Hub"})
+
+-- Buttons
+AddButton(Tab1o, {
+    Name = "Gravity Hub",
     Callback = function()
-	  local Settings = {
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()}
-  end
-	    }
+        local ok, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/main/Main.lua"))()
+        end)
+        if not ok then warn("Gravity Hub load failed:", err) end
+    end
+})
 
-	AddButton(Tab2o, {
-     Name = "Quantum hub",
+AddButton(Tab2o, {
+    Name = "Quantum Hub",
     Callback = function()
-	  local Settings = {
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()}
-  end
-		}
-	
+        local ok, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/main/QuantumOnyx.lua"))()
+        end)
+        if not ok then warn("Quantum Hub load failed:", err) end
+    end
+})
