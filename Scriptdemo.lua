@@ -1,42 +1,48 @@
--- UI Library
-loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/main/UiREDzV2.lua"
-))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
 
--- Window
-local Window = MakeWindow({
-    Hub = {
-        Title = "Ami Hub",
-        Animation = "Youtube: TBoy Roblox"
-    },
-    Key = {
-        KeySystem = false
+       local Window = MakeWindow({
+         Hub = {
+         Title = "Syper hub",
+         Animation = "Youtube: TBoy Roblox"
+         },
+        Key = {
+        KeySystem = false,
+        Title = "Key System",
+        Description = "",
+        KeyLink = "",
+        Keys = {"1234"},
+        Notifi = {
+        Notifications = true,
+        CorrectKey = "Running the Script...",
+       Incorrectkey = "The key is incorrect",
+       CopyKeyLink = "Copied to Clipboard"
+      }
     }
-})
+  })
 
--- Minimize Button
-MinimizeButton({
-    Image = "http://www.roblox.com/asset/?id=83190276951914",
-    Size = {60, 60},
-    Color = Color3.fromRGB(10, 10, 10),
-    Corner = true
-})
-
--- Tab
-local Tab1o = MakeTab({Name = "Script Tổng Hợp"})
-
--- Button Gravity Hub
-AddButton(Tab1o, {
-    Name = "Gravity Hub",
+       MinimizeButton({
+       Image = "http://www.roblox.com/asset/?id=83190276951914",
+       Size = {60, 60},
+       Color = Color3.fromRGB(10, 10, 10),
+       Corner = true,
+       Stroke = false,
+       StrokeColor = Color3.fromRGB(255, 0, 0)
+      })
+      
+------ Tab
+     local Tab1o = MakeTab({Name = "Gravity hub"})
+     local Tab2o = MakeTab({Name = "Volcanic v3"})
+     
+------- BUTTON
+    
+    AddButton(Tab1o, {
+     Name = "Gravity hub",
     Callback = function()
-        local ok, err = pcall(function()
-            loadstring(game:HttpGet(
-                "https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/main/Main.lua"
-            ))()
-        end)
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
 
-        if not ok then
-            warn("Gravity Hub load failed:", err)
-        end
-    end
-})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+  end
+    }
