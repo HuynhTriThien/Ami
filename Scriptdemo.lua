@@ -31,7 +31,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       
 ------ Tab
      local Tab1o = MakeTab({Name = "Redz hub v2"})
-     local Tab1o = MakeTab({Name = "Gravity hub"})
+     local Tab2o = MakeTab({Name = "Gravity hub"})
 ------- BUTTON
     
     AddButton(Tab1o, {
@@ -44,4 +44,11 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
   end
+    })
+
+AddButton(Tab2o, {
+     Name = "Gravity hub",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+      end
     })
